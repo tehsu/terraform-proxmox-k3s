@@ -9,7 +9,7 @@ locals {
 
 
     storage_type = "scsi"
-    storage_id   = "local-lvm"
+    storage_id   = "local-zfs"
     disk_size    = "10G"
     user         = "support"
     network_tag  = -1
