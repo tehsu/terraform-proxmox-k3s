@@ -56,7 +56,7 @@ resource "proxmox_vm_qemu" "k3s-support" {
 
   network {
     bridge    = local.support_node_settings.network_bridge
-    firewall  = true
+    firewall  = false
     link_down = false
     macaddr   = upper(macaddress.k3s-support.address)
     model     = "virtio"

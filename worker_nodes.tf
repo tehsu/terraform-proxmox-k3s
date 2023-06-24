@@ -64,7 +64,7 @@ resource "proxmox_vm_qemu" "k3s-worker" {
 
   network {
     bridge    = each.value.network_bridge
-    firewall  = true
+    firewall  = false
     link_down = false
     macaddr   = upper(macaddress.k3s-workers[each.key].address)
     model     = "virtio"
