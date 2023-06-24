@@ -34,10 +34,12 @@ locals {
 resource "proxmox_vm_qemu" "k3s-support" {
   target_node = var.proxmox_node
   name        = join("-", [var.cluster_name, "support"])
-
+  
   clone = var.node_template
 
   pool = var.proxmox_resource_pool
+
+  scsihw = "virtio-scsi-pci"
 
   # cores = 2
   cores   = local.support_node_settings.cores
