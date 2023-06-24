@@ -85,6 +85,7 @@ resource "proxmox_vm_qemu" "k3s-master" {
   connection {
     type = "ssh"
     user = local.master_node_settings.user
+    private_key = file("~/.ssh/id_rsa")
     host = local.master_node_ips[count.index]
   }
 

@@ -95,6 +95,7 @@ resource "proxmox_vm_qemu" "k3s-worker" {
   connection {
     type = "ssh"
     user = each.value.user
+    private_key = file("~/.ssh/id_rsa")
     host = each.value.ip
   }
 
