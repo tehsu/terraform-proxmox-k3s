@@ -37,6 +37,8 @@ resource "proxmox_vm_qemu" "k3s-master" {
 
   pool = var.proxmox_resource_pool
 
+  scsihw = "virtio-scsi-pci"
+
   # cores = 2
   cores   = local.master_node_settings.cores
   sockets = local.master_node_settings.sockets
