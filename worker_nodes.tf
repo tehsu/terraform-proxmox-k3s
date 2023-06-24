@@ -78,7 +78,8 @@ resource "proxmox_vm_qemu" "k3s-worker" {
       ciuser,
       sshkeys,
       disk,
-      network
+      network,
+      qemu_os
     ]
   }
 
