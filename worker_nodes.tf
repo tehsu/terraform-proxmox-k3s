@@ -47,7 +47,9 @@ resource "proxmox_vm_qemu" "k3s-worker" {
 
   pool = var.proxmox_resource_pool
 
-  # cores = 2
+  scsihw = "virtio-scsi-pci"
+
+# cores = 2
   cores   = each.value.cores
   sockets = each.value.sockets
   memory  = each.value.memory
