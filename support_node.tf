@@ -139,7 +139,7 @@ resource "null_resource" "k3s_nginx_config" {
   connection {
     type = "ssh"
     user = local.support_node_settings.user
-    private_key = file("~/.ssh/id_rsa")
+    private_key = var.private_key
     host = local.support_node_ip
   }
 
