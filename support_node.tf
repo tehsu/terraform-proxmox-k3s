@@ -88,7 +88,7 @@ resource "proxmox_vm_qemu" "k3s-support" {
   connection {
     type = "ssh"
     user = local.support_node_settings.user
-    private_key = file("~/.ssh/id_rsa")
+    private_key = var.private_key
     host = local.support_node_ip
   }
 
