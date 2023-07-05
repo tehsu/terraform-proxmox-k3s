@@ -144,3 +144,9 @@ variable "nameserver" {
   type        = string
   description = "nameserver"
 }
+
+variable "private_key" {
+  default     = file("~/.ssh/id_ed25519")
+  type        = string
+  description = "private key used for ssh"
+}
