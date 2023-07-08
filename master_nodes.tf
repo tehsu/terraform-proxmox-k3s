@@ -8,7 +8,7 @@ locals {
     sockets        = 1
     memory         = 4096
     storage_type   = "scsi"
-    storage_id     = "local-zfs"
+    storage_id     = var.storage_id
     disk_size      = "20G"
     user           = "k3s"
     network_bridge = "vmbr0"

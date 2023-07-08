@@ -149,3 +149,8 @@ variable "private_key" {
   type        = string
   description = "private key used for ssh"
 }
+
+variable "storage_id" {
+  type        = string
+  description = "storage id"
+}
